@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LibraryImpl implements Library {
-
+    //klasa faktycznej funkcjonalności biblioteki
+    //ma łączyć ze sobą Usera oraz Book
     Map<String, User> users = new HashMap<>();
     Map<String, Book> books = new HashMap<>();
     Map<String, String> rentedBooks = new HashMap<>();

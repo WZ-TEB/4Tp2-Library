@@ -8,12 +8,12 @@ class LibraryImplTest {
 
     LibraryImpl testLibrary = new LibraryImpl();
 
-    @BeforeEach
+    @BeforeEach //przed każdym testem stawiana jest nowa biblioteka
     void setUp() {
         LibraryImpl testLibrary = new LibraryImpl();
     }
 
-    @AfterEach
+    @AfterEach //po kazdym tescie biblioteka jest burzona
     void tearDown() {
         testLibrary = null;
     }

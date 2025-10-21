@@ -3,6 +3,8 @@ package org.example;
 import java.util.UUID;
 
 public class Book {
+    //klasa odnosząca się tylko do książki w próżni
+    //zawiera tylko dane książki, konstruktor, gettery & settery
     private String bookName;
     private String author;
     private String publisher;
@@ -13,6 +15,9 @@ public class Book {
         this.author = author;
         this.publisher = publisher;
         this.ISBN = UUID.randomUUID().toString();
+        //ID jest generowane automatycznie jako UUID
+        //oszczedza nam to problemow z powtarzalnoscia ID
+        //(mimo ze nie jest do konca poprawne, ISBN to cos innego)
     }
 
     public String getBookName() {

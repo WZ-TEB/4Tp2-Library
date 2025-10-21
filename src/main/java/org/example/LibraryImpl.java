@@ -1,12 +1,13 @@
 package org.example;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class LibraryImpl implements Library {
 
-    Map<String, User> users;
-    Map<String, Book> books;
-    Map<String, String> rentedBooks;
+    Map<String, User> users = new HashMap<>();
+    Map<String, Book> books = new HashMap<>();
+    Map<String, String> rentedBooks = new HashMap<>();
 
     @Override
     public String addBook(String bookName, String author, String publisher) {
@@ -34,11 +35,11 @@ public class LibraryImpl implements Library {
 
     @Override
     public void rentBookToUser(String isbn, String userId) {
-
+        rentedBooks.put(isbn, userId);
     }
 
     @Override
     public void returnBook(String isbn) {
-
+        rentedBooks.remove(isbn);
     }
 }
